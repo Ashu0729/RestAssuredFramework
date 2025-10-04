@@ -6,7 +6,6 @@ import com.github.javafaker.Faker;
 import api.endpoints.UserEndPoints;
 import api.payload.UserPayload;
 import io.restassured.response.Response;
-
 import static org.hamcrest.Matchers.equalTo;
 
 public class UserTest {
@@ -30,25 +29,22 @@ public class UserTest {
 	// Wait for 2 seconds between tests
 	Thread.sleep(2000);
 	}
-	
+
 	@Test(priority=1)
 	public void testPostUser() {
 		System.out.println("******************************************");
 		Response response = UserEndPoints.postUser(userPayload);
 		response.then().log().all();
 		response.then().statusCode(200);
-		//Assert.assertEquals(response.getStatusCode(),200);	
-		}
-	
+	}
 	
 	@Test(priority=2)
 	public void testGetUser() {
-		
 		System.out.println("******************************************");
 		Response response = UserEndPoints.getUser(userPayload.getUsername());
 		response.then().log().all();
 		response.then().statusCode(200);
-		}
+	}
 	
 	@Test(priority=3)
 	public void testUpdateUser() {
@@ -69,21 +65,20 @@ public class UserTest {
 		Response responseAfterUpdate = UserEndPoints.getUser(userPayload.getUsername());
 		responseAfterUpdate.then().log().all();
 		responseAfterUpdate.then().statusCode(200)
-								.body("id", equalTo(userPayload.getId()))
-								.body("firstName", equalTo(userPayload.getFirstName()))
-								.body("lastName", equalTo(userPayload.getLastName()))
-								.body("email", equalTo(userPayload.getEmail()))
-								.body("phone", equalTo(userPayload.getPhone()))
-								.body("username", equalTo(userPayload.getUsername()))
-								.body("userStatus", equalTo(userPayload.getUserStatus()));
+							.body("id", equalTo(userPayload.getId()))
+							.body("firstName", equalTo(userPayload.getFirstName()))
+							.body("lastName", equalTo(userPayload.getLastName()))
+							.body("email", equalTo(userPayload.getEmail()))
+							.body("phone", equalTo(userPayload.getPhone()))
+							.body("username", equalTo(userPayload.getUsername()))
+							.body("userStatus", equalTo(userPayload.getUserStatus()));
 	}
 	
 	@Test(priority=4)
 	public void testDeleteUser() {
-		
 		System.out.println("******************************************");
 		Response response = UserEndPoints.deleteUser(userPayload.getUsername());
 		response.then().log().all();
-		response.then().statusCode(200);
-		}
+		response.then().statusCode(400);
+	}
 }

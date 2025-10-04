@@ -60,8 +60,4 @@ public class UserPayload {
 	public void setUserStatus(int userStatus) {
 		this.userStatus = userStatus;
 	}
-	
-	
 }
-
-
