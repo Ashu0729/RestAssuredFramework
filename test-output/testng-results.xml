@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-04T17:19:40 EDT" name="Default suite" finished-at="2025-10-04T17:19:59 EDT" duration-ms="19107">
+    <groups>
+    </groups>
+    <test started-at="2025-10-04T17:19:40 EDT" name="Default test" finished-at="2025-10-04T17:19:59 EDT" duration-ms="19107">
+      <class name="api.test.UserTest">
+        <test-method is-config="true" signature="setupUserData()[pri:0, instance:api.test.UserTest@2df3b89c]" started-at="2025-10-04T17:19:40 EDT" name="setupUserData" finished-at="2025-10-04T17:19:41 EDT" duration-ms="611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupUserData -->
+        <test-method signature="testPostUser()[pri:1, instance:api.test.UserTest@2df3b89c]" started-at="2025-10-04T17:19:41 EDT" name="testPostUser" finished-at="2025-10-04T17:19:48 EDT" duration-ms="7210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostUser -->
+        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTest@2df3b89c]" started-at="2025-10-04T17:19:48 EDT" name="waitBetweenTests" finished-at="2025-10-04T17:19:50 EDT" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitBetweenTests -->
+        <test-method signature="testGetUser()[pri:2, instance:api.test.UserTest@2df3b89c]" started-at="2025-10-04T17:19:50 EDT" name="testGetUser" finished-at="2025-10-04T17:19:50 EDT" duration-ms="438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUser -->
+        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTest@2df3b89c]" started-at="2025-10-04T17:19:50 EDT" name="waitBetweenTests" finished-at="2025-10-04T17:19:52 EDT" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitBetweenTests -->
+        <test-method signature="testUpdateUser()[pri:3, instance:api.test.UserTest@2df3b89c]" started-at="2025-10-04T17:19:52 EDT" name="testUpdateUser" finished-at="2025-10-04T17:19:55 EDT" duration-ms="2325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateUser -->
+        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTest@2df3b89c]" started-at="2025-10-04T17:19:55 EDT" name="waitBetweenTests" finished-at="2025-10-04T17:19:57 EDT" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitBetweenTests -->
+        <test-method signature="testDeleteUser()[pri:4, instance:api.test.UserTest@2df3b89c]" started-at="2025-10-04T17:19:57 EDT" name="testDeleteUser" finished-at="2025-10-04T17:19:57 EDT" duration-ms="316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteUser -->
+        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTest@2df3b89c]" started-at="2025-10-04T17:19:57 EDT" name="waitBetweenTests" finished-at="2025-10-04T17:19:59 EDT" duration-ms="2001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitBetweenTests -->
+      </class> <!-- api.test.UserTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
