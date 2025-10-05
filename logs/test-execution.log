@@ -1,0 +1,35 @@
+[2025-10-05 16:32:31] [main] INFO  api.test.UserTest - ******************************************
+[2025-10-05 16:32:40] [main] INFO  api.test.UserTest - ******************************************
+[2025-10-05 16:32:42] [main] INFO  api.test.UserTest - ******************************************
+[2025-10-05 16:32:43] [main] INFO  api.test.UserTest - **********************
+[2025-10-05 16:32:47] [main] INFO  api.test.UserTest - ******************************************
+[2025-10-05 16:36:07] [main] INFO  api.test.UserTest - *********** Starting - testPostUser *******************************
+[2025-10-05 16:36:13] [main] INFO  api.test.UserTest - *********** Ending - testPostUser *******************************
+[2025-10-05 16:36:15] [main] INFO  api.test.UserTest - *********** Starting - testGetUser *******************************
+[2025-10-05 16:36:18] [main] INFO  api.test.UserTest - *********** Starting - testUpdateUser *******************************
+[2025-10-05 16:36:18] [main] INFO  api.test.UserTest - *********** Validating the Values after Updating the user *******************************
+[2025-10-05 16:36:20] [main] INFO  api.test.UserTest - *********** Ending - testUpdateUser *******************************
+[2025-10-05 16:36:22] [main] INFO  api.test.UserTest - *********** Starting - testDeleteUser *******************************
+[2025-10-05 16:37:21] [main] INFO  api.test.UserTest - *********** Starting - testPostUser *******************************
+[2025-10-05 16:37:28] [main] INFO  api.test.UserTest - *********** Ending - testPostUser *******************************
+[2025-10-05 16:37:30] [main] INFO  api.test.UserTest - *********** Starting - testGetUser *******************************
+[2025-10-05 16:37:32] [main] INFO  api.test.UserTest - *********** Starting - testUpdateUser *******************************
+[2025-10-05 16:37:33] [main] INFO  api.test.UserTest - *********** Validating the Values after Updating the user *******************************
+[2025-10-05 16:37:35] [main] INFO  api.test.UserTest - *********** Starting - testDeleteUser *******************************
+[2025-10-05 16:44:20] [main] DEBUG api.test.UserTest - Setting Random values using Faker
+[2025-10-05 16:44:21] [main] INFO  api.test.UserTest - *********** Starting - testPostUser *******************************
+[2025-10-05 16:44:28] [main] INFO  api.test.UserTest - *********** Ending - testPostUser *******************************
+[2025-10-05 16:44:30] [main] INFO  api.test.UserTest - *********** Starting - testGetUser *******************************
+[2025-10-05 16:44:30] [main] INFO  api.test.UserTest - *********** Ending - testGetUser *******************************
+[2025-10-05 16:44:32] [main] INFO  api.test.UserTest - *********** Starting - testUpdateUser *******************************
+[2025-10-05 16:44:33] [main] INFO  api.test.UserTest - *********** Validating the Values after Updating the user *******************************
+[2025-10-05 16:44:35] [main] INFO  api.test.UserTest - *********** Ending - testUpdateUser *******************************
+[2025-10-05 16:44:37] [main] INFO  api.test.UserTest - *********** Starting - testDeleteUser *******************************
+[2025-10-05 16:48:05] [main] DEBUG api.test.UserTest - Setting Random values using Faker
+[2025-10-05 16:48:06] [main] INFO  api.test.UserTest - *********** Starting - testPostUser *******************************
+[2025-10-05 16:48:13] [main] INFO  api.test.UserTest - *********** Ending - testPostUser *******************************
+[2025-10-05 16:48:15] [main] INFO  api.test.UserTest - *********** Starting - testGetUser *******************************
+[2025-10-05 16:48:18] [main] INFO  api.test.UserTest - *********** Starting - testUpdateUser *******************************
+[2025-10-05 16:48:18] [main] INFO  api.test.UserTest - *********** Validating the Values after Updating the user *******************************
+[2025-10-05 16:48:20] [main] INFO  api.test.UserTest - *********** Ending - testUpdateUser *******************************
+[2025-10-05 16:48:22] [main] INFO  api.test.UserTest - *********** Starting - testDeleteUser *******************************

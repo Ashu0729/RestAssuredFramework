@@ -6,8 +6,12 @@ import api.utilities.DataProviders;
 import api.payload.UserPayload;
 import io.restassured.response.Response;
 import static org.hamcrest.Matchers.equalTo;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class UserTestDataDriven {
+    private static final Logger logger = LogManager.getLogger(UserTestDataDriven.class);
+
 	@AfterMethod
 	public void waitBetweenTests() throws InterruptedException {
 	// Wait for 4 seconds between tests
@@ -17,15 +21,19 @@ public class UserTestDataDriven {
     @Test(dataProvider = "userDataFromExcel", dataProviderClass = DataProviders.class, priority = 1, enabled = true)
     public void testPostUser(String id, String username, String firstName, String lastName, String email, String password, String phone, String userStatus) throws InterruptedException {
         UserPayload userPayload = new UserPayload();
+        logger.debug("Setting user ID: {}", id);
         userPayload.setId(Integer.parseInt(id));
+        logger.debug("Setting username: {}", username);        
         userPayload.setUsername(username);
+        logger.debug("Setting firstName: {}", firstName);
         userPayload.setFirstName(firstName);
+        logger.debug("Setting LastName: {}", lastName);
         userPayload.setLastName(lastName);
         userPayload.setEmail(email);
         userPayload.setPassword(password);
         userPayload.setPhone(phone);
         userPayload.setUserStatus(Integer.parseInt(userStatus));
-        System.out.println("********* POST USER *********");
+        logger.info("********* POST USER *********");
         Response response = UserEndPoints.postUser(userPayload);
         response.then().log().all();
         response.then().statusCode(200);
@@ -34,7 +42,7 @@ public class UserTestDataDriven {
 
     @Test(dataProvider = "userDataFromExcel", dataProviderClass = DataProviders.class, priority = 2, enabled = true)
     public void testGetUser(String id, String username, String firstName, String lastName, String email, String password, String phone, String userStatus) {
-        System.out.println("********* GET USER *********");
+        logger.info("********* GET USER *********");
         Response response = UserEndPoints.getUser(username);
         response.then().log().all();
         response.then().statusCode(200)
@@ -59,7 +67,7 @@ public class UserTestDataDriven {
         userPayload.setPassword(password);
         userPayload.setPhone(phone);
         userPayload.setUserStatus(Integer.parseInt(userStatus));
-        System.out.println("********* UPDATE USER *********");
+        logger.info("********* UPDATE USER *********");
         Response response = UserEndPoints.updateUser(userPayload, username);
         response.then().log().all();
         response.then().statusCode(200);
@@ -74,7 +82,7 @@ public class UserTestDataDriven {
 
     @Test(dataProvider = "userDataFromExcel", dataProviderClass = DataProviders.class, priority = 4, enabled = false)
     public void testDeleteUser(String id, String username, String firstName, String lastName, String email, String password, String phone, String userStatus) {
-        System.out.println("********* DELETE USER *********");
+        logger.info("********* DELETE USER *********");
         Response response = UserEndPoints.deleteUser(username);
         response.then().log().all();
         response.then().statusCode(200);

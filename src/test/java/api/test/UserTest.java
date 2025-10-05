@@ -7,13 +7,17 @@ import api.endpoints.UserEndPoints;
 import api.payload.UserPayload;
 import io.restassured.response.Response;
 import static org.hamcrest.Matchers.equalTo;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class UserTest {
 	Faker faker = new Faker();
 	UserPayload userPayload = new UserPayload();
+	private static final Logger logger = LogManager.getLogger(UserTest.class);
 	
 	@BeforeClass
-	public void setupUserData() {
+	public void setupUser() {
+		logger.debug("Setting Random values using Faker");
 		userPayload.setId(faker.idNumber().hashCode());
 		userPayload.setUsername(faker.name().username());
 		userPayload.setFirstName(faker.name().firstName());
@@ -32,18 +36,22 @@ public class UserTest {
 
 	@Test(priority=1)
 	public void testPostUser() {
-		System.out.println("******************************************");
+		logger.info("*********** Starting - testPostUser *******************************");
 		Response response = UserEndPoints.postUser(userPayload);
 		response.then().log().all();
 		response.then().statusCode(200);
+		logger.info("*********** Ending - testPostUser *******************************");
+
 	}
 	
 	@Test(priority=2)
 	public void testGetUser() {
-		System.out.println("******************************************");
+		logger.info("*********** Starting - testGetUser *******************************");
 		Response response = UserEndPoints.getUser(userPayload.getUsername());
 		response.then().log().all();
 		response.then().statusCode(200);
+		logger.info("*********** Ending - testGetUser *******************************");
+
 	}
 	
 	@Test(priority=3)
@@ -55,13 +63,12 @@ public class UserTest {
 		userPayload.setEmail(faker.internet().safeEmailAddress());
 		userPayload.setPhone(faker.phoneNumber().cellPhone());
 
-		System.out.println("******************************************");
+		logger.info("*********** Starting - testUpdateUser *******************************");
 		Response response = UserEndPoints.updateUser(userPayload, userPayload.getUsername());
 		response.then().log().all();
 		response.then().statusCode(200);
 
-		//Checking the updated values after update
-		System.out.println("**********************");
+		logger.info("*********** Validating the Values after Updating the user *******************************");
 		Response responseAfterUpdate = UserEndPoints.getUser(userPayload.getUsername());
 		responseAfterUpdate.then().log().all();
 		responseAfterUpdate.then().statusCode(200)
@@ -72,13 +79,16 @@ public class UserTest {
 							.body("phone", equalTo(userPayload.getPhone()))
 							.body("username", equalTo(userPayload.getUsername()))
 							.body("userStatus", equalTo(userPayload.getUserStatus()));
+		logger.info("*********** Ending - testUpdateUser *******************************");
+
 	}
 	
 	@Test(priority=4)
 	public void testDeleteUser() {
-		System.out.println("******************************************");
+		logger.info("*********** Starting - testDeleteUser *******************************");
 		Response response = UserEndPoints.deleteUser(userPayload.getUsername());
 		response.then().log().all();
 		response.then().statusCode(400);
+		logger.info("*********** Ending - testDeleteUser *******************************");
 	}
 }
