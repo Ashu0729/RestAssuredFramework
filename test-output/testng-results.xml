@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="8" passed="5" failed="1" skipped="0">
+<testng-results ignored="2" total="8" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-04T19:43:39 EDT" name="Default suite" finished-at="2025-10-04T19:44:55 EDT" duration-ms="75228">
+  <suite started-at="2025-10-05T13:53:39 EDT" name="Default suite" finished-at="2025-10-05T13:54:42 EDT" duration-ms="62612">
     <groups>
     </groups>
-    <test started-at="2025-10-04T19:43:39 EDT" name="Default test" finished-at="2025-10-04T19:44:55 EDT" duration-ms="75228">
+    <test started-at="2025-10-05T13:53:39 EDT" name="Default test" finished-at="2025-10-05T13:54:42 EDT" duration-ms="62612">
       <class name="api.test.UserTestDataDriven">
-        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:43:42 EDT" name="testPostUser" data-provider="userDataFromExcel" finished-at="2025-10-04T19:43:50 EDT" duration-ms="8059" status="PASS">
+        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:53:43 EDT" name="testPostUser" data-provider="userDataFromExcel" finished-at="2025-10-05T13:54:04 EDT" duration-ms="20778" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,11 +53,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostUser -->
-        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:43:50 EDT" name="waitBetweenTests" finished-at="2025-10-04T19:44:00 EDT" duration-ms="10023" status="PASS">
+        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:04 EDT" name="waitBetweenTests" finished-at="2025-10-05T13:54:06 EDT" duration-ms="2016" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- waitBetweenTests -->
-        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:44:00 EDT" name="testPostUser" data-provider="userDataFromExcel" finished-at="2025-10-04T19:44:01 EDT" duration-ms="285" status="PASS">
+        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:06 EDT" name="testPostUser" data-provider="userDataFromExcel" finished-at="2025-10-05T13:54:17 EDT" duration-ms="10377" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -103,11 +103,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostUser -->
-        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:44:01 EDT" name="waitBetweenTests" finished-at="2025-10-04T19:44:11 EDT" duration-ms="10002" status="PASS">
+        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:17 EDT" name="waitBetweenTests" finished-at="2025-10-05T13:54:19 EDT" duration-ms="2003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- waitBetweenTests -->
-        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:44:11 EDT" name="testPostUser" data-provider="userDataFromExcel" finished-at="2025-10-04T19:44:11 EDT" duration-ms="357" status="PASS">
+        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:19 EDT" name="testPostUser" data-provider="userDataFromExcel" finished-at="2025-10-05T13:54:29 EDT" duration-ms="10332" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -153,11 +153,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostUser -->
-        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:44:11 EDT" name="waitBetweenTests" finished-at="2025-10-04T19:44:21 EDT" duration-ms="10002" status="PASS">
+        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:29 EDT" name="waitBetweenTests" finished-at="2025-10-05T13:54:31 EDT" duration-ms="2004" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- waitBetweenTests -->
-        <test-method signature="testGetUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:44:21 EDT" name="testGetUser" data-provider="userDataFromExcel" finished-at="2025-10-04T19:44:22 EDT" duration-ms="520" status="FAIL">
+        <test-method signature="testGetUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:31 EDT" name="testGetUser" data-provider="userDataFromExcel" finished-at="2025-10-05T13:54:35 EDT" duration-ms="3796" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -203,12 +203,16 @@
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.
-Expected status code <200> but was <404>.
+JSON path firstName doesn't match.
+Expected: First
+  Actual: Firstupd
 ]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <200> but was <404>.
+JSON path firstName doesn't match.
+Expected: First
+  Actual: Firstupd
 
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -228,11 +232,11 @@ at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(Plain
 at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at api.test.UserTestDataDriven.testGetUser(UserTestDataDriven.java:50)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+at api.test.UserTestDataDriven.testGetUser(UserTestDataDriven.java:43)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -265,11 +269,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetUser -->
-        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:44:22 EDT" name="waitBetweenTests" finished-at="2025-10-04T19:44:32 EDT" duration-ms="10002" status="PASS">
+        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:35 EDT" name="waitBetweenTests" finished-at="2025-10-05T13:54:37 EDT" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- waitBetweenTests -->
-        <test-method signature="testGetUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:44:32 EDT" name="testGetUser" data-provider="userDataFromExcel" finished-at="2025-10-04T19:44:34 EDT" duration-ms="2468" status="PASS">
+        <test-method signature="testGetUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:37 EDT" name="testGetUser" data-provider="userDataFromExcel" finished-at="2025-10-05T13:54:38 EDT" duration-ms="553" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -315,11 +319,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetUser -->
-        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:44:34 EDT" name="waitBetweenTests" finished-at="2025-10-04T19:44:44 EDT" duration-ms="10002" status="PASS">
+        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:38 EDT" name="waitBetweenTests" finished-at="2025-10-05T13:54:40 EDT" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- waitBetweenTests -->
-        <test-method signature="testGetUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:44:44 EDT" name="testGetUser" data-provider="userDataFromExcel" finished-at="2025-10-04T19:44:45 EDT" duration-ms="500" status="PASS">
+        <test-method signature="testGetUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:40 EDT" name="testGetUser" data-provider="userDataFromExcel" finished-at="2025-10-05T13:54:40 EDT" duration-ms="380" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -362,10 +366,74 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+JSON path firstName doesn't match.
+Expected: Third
+  Actual: Thirdupd
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+JSON path firstName doesn't match.
+Expected: Third
+  Actual: Thirdupd
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+at api.test.UserTestDataDriven.testGetUser(UserTestDataDriven.java:43)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetUser -->
-        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@222545dc]" started-at="2025-10-04T19:44:45 EDT" name="waitBetweenTests" finished-at="2025-10-04T19:44:55 EDT" duration-ms="10001" status="PASS">
+        <test-method is-config="true" signature="waitBetweenTests()[pri:0, instance:api.test.UserTestDataDriven@a514af7]" started-at="2025-10-05T13:54:40 EDT" name="waitBetweenTests" finished-at="2025-10-05T13:54:42 EDT" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- waitBetweenTests -->

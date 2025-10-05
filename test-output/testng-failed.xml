@@ -5,7 +5,7 @@
     <classes>
       <class name="api.test.UserTestDataDriven">
         <methods>
-          <include name="testGetUser" invocation-numbers="0"/>
+          <include name="testGetUser" invocation-numbers="0 2"/>
           <include name="waitBetweenTests"/>
         </methods>
       </class> <!-- api.test.UserTestDataDriven -->

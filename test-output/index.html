@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ashut\AppData\Local\Temp\testng-eclipse-1359210381\testng-customsuite.xml</span>
+                    <span>C:\Users\ashut\AppData\Local\Temp\testng-eclipse-138143713\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                    <span class="method-stats">6 methods, 2 failed,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="api.test.UserTestDataDriven" class="method navigator-link" hash-for-method="testGetUser(1010, askytestuser1, First, Name, First@name.com, first, 12345, 0)">testGetUser(1010, askytestuser1, First, Name, First@name.com, first, 12345, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="api.test.UserTestDataDriven" class="method navigator-link" hash-for-method="testGetUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)">testGetUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,22 +127,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="api.test.UserTestDataDriven" class="method navigator-link" hash-for-method="testGetUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)">testGetUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="api.test.UserTestDataDriven" class="method navigator-link" hash-for-method="testPostUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)">testPostUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="api.test.UserTestDataDriven" class="method navigator-link" hash-for-method="testPostUser(1010, askytestuser1, First, Name, First@name.com, first, 12345, 0)">testPostUser(1010, askytestuser1, First, Name, First@name.com, first, 12345, 0)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="api.test.UserTestDataDriven" class="method navigator-link" hash-for-method="testPostUser(1011, askytestuser2, Second, Name, second@name.com, second, 1234, 0)">testPostUser(1011, askytestuser2, Second, Name, second@name.com, second, 1234, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="api.test.UserTestDataDriven" class="method navigator-link" hash-for-method="testPostUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)">testPostUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -165,7 +165,9 @@
                   <span class="method-name">testGetUser</span>
                   <span class="parameters">(1010,askytestuser1,First,Name,First@name.com,first,12345,0)</span>
                   <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;404&gt;.
+JSON path firstName doesn&apos;t match.
+Expected: First
+  Actual: Firstupd
 
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -185,11 +187,73 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at api.test.UserTestDataDriven.testGetUser(UserTestDataDriven.java:50)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at api.test.UserTestDataDriven.testGetUser(UserTestDataDriven.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)">
+                  </a> <!-- testGetUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1) -->
+                  <span class="method-name">testGetUser</span>
+                  <span class="parameters">(1012,askytestuser3,Third,Name,third@name.com,third,12,1)</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+JSON path firstName doesn&apos;t match.
+Expected: Third
+  Actual: Thirdupd
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at api.test.UserTestDataDriven.testGetUser(UserTestDataDriven.java:43)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -238,22 +302,6 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testGetUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)">
-                  </a> <!-- testGetUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1) -->
-                  <span class="method-name">testGetUser</span>
-                  <span class="parameters">(1012,askytestuser3,Third,Name,third@name.com,third,12,1)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testPostUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)">
-                  </a> <!-- testPostUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1) -->
-                  <span class="method-name">testPostUser</span>
-                  <span class="parameters">(1012,askytestuser3,Third,Name,third@name.com,third,12,1)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="testPostUser(1010, askytestuser1, First, Name, First@name.com, first, 12345, 0)">
                   </a> <!-- testPostUser(1010, askytestuser1, First, Name, First@name.com, first, 12345, 0) -->
                   <span class="method-name">testPostUser</span>
@@ -268,12 +316,20 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
                   <span class="parameters">(1011,askytestuser2,Second,Name,second@name.com,second,1234,0)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPostUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)">
+                  </a> <!-- testPostUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1) -->
+                  <span class="method-name">testPostUser</span>
+                  <span class="parameters">(1012,askytestuser3,Third,Name,third@name.com,third,12,1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ashut\AppData\Local\Temp\testng-eclipse-1359210381\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ashut\AppData\Local\Temp\testng-eclipse-138143713\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -326,32 +382,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testPostUser')
 data.setCell(0, 2, 'api.test.UserTestDataDriven')
-data.setCell(0, 3, 8059);
+data.setCell(0, 3, 20778);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testGetUser')
+data.setCell(1, 1, 'testPostUser')
 data.setCell(1, 2, 'api.test.UserTestDataDriven')
-data.setCell(1, 3, 2468);
+data.setCell(1, 3, 10377);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testGetUser')
+data.setCell(2, 1, 'testPostUser')
 data.setCell(2, 2, 'api.test.UserTestDataDriven')
-data.setCell(2, 3, 520);
+data.setCell(2, 3, 10332);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testGetUser')
 data.setCell(3, 2, 'api.test.UserTestDataDriven')
-data.setCell(3, 3, 500);
+data.setCell(3, 3, 3796);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testPostUser')
+data.setCell(4, 1, 'testGetUser')
 data.setCell(4, 2, 'api.test.UserTestDataDriven')
-data.setCell(4, 3, 357);
+data.setCell(4, 3, 553);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testPostUser')
+data.setCell(5, 1, 'testGetUser')
 data.setCell(5, 2, 'api.test.UserTestDataDriven')
-data.setCell(5, 3, 285);
+data.setCell(5, 3, 380);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 46 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -372,9 +428,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">api.test.UserTestDataDriven</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testUpdateUser</span>
-                <br/>
                 <span class="ignored-method-name">testDeleteUser</span>
+                <br/>
+                <span class="ignored-method-name">testUpdateUser</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -393,49 +449,51 @@ return data;
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">waitBetweenTests</span>
-                <span class="method-start">8073 ms</span>
+                <span class="method-start">20787 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testPostUser(1011, askytestuser2, Second, Name, second@name.com, second, 1234, 0)</span>
-                <span class="method-start">18104 ms</span>
+                <span class="method-start">22807 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">waitBetweenTests</span>
-                <span class="method-start">18393 ms</span>
+                <span class="method-start">33191 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testPostUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)</span>
-                <span class="method-start">28396 ms</span>
+                <span class="method-start">35198 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">waitBetweenTests</span>
-                <span class="method-start">28756 ms</span>
+                <span class="method-start">45538 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testGetUser(1010, askytestuser1, First, Name, First@name.com, first, 12345, 0)</span>
-                <span class="method-start">38859 ms</span>
+                <span class="method-start">47763 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">waitBetweenTests</span>
-                <span class="method-start">39389 ms</span>
+                <span class="method-start">51579 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testGetUser(1011, askytestuser2, Second, Name, second@name.com, second, 1234, 0)</span>
-                <span class="method-start">49392 ms</span>
+                <span class="method-start">53582 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">waitBetweenTests</span>
-                <span class="method-start">51863 ms</span>
+                <span class="method-start">54141 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testGetUser(1012, askytestuser3, Third, Name, third@name.com, third, 12, 1)</span>
-                <span class="method-start">61866 ms</span>
+                <span class="method-start">56144 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">waitBetweenTests</span>
-                <span class="method-start">62368 ms</span>
+                <span class="method-start">56530 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

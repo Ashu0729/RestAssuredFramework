@@ -1,31 +1,20 @@
 package api.test;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import api.payload.UserPayload;
 import api.endpoints.UserEndPoints;
-import api.utilities.ExcelUtils;
+import api.utilities.DataProviders;
+import api.payload.UserPayload;
 import io.restassured.response.Response;
-import java.util.Iterator;
-import java.util.List;
 import static org.hamcrest.Matchers.equalTo;
 
 public class UserTestDataDriven {
-    @DataProvider(name = "userDataFromExcel")
-    public Iterator<Object[]> userDataFromExcel() throws Exception {
-        String excelPath = "src/test/resources/DataDriven.xlsx";
-        ExcelUtils excel = new ExcelUtils(excelPath);
-        List<Object[]> data = excel.getSheetData("User"); // Change sheet name if needed
-        return data.iterator();
-    }
-    
 	@AfterMethod
 	public void waitBetweenTests() throws InterruptedException {
 	// Wait for 4 seconds between tests
 	Thread.sleep(2000);
 	}
 
-    @Test(dataProvider = "userDataFromExcel", priority = 1,enabled = true)
+    @Test(dataProvider = "userDataFromExcel", dataProviderClass = DataProviders.class, priority = 1, enabled = true)
     public void testPostUser(String id, String username, String firstName, String lastName, String email, String password, String phone, String userStatus) throws InterruptedException {
         UserPayload userPayload = new UserPayload();
         userPayload.setId(Integer.parseInt(id));
@@ -43,7 +32,7 @@ public class UserTestDataDriven {
         Thread.sleep(10000);
     }
 
-    @Test(dataProvider = "userDataFromExcel", priority = 2,enabled = true)
+    @Test(dataProvider = "userDataFromExcel", dataProviderClass = DataProviders.class, priority = 2, enabled = true)
     public void testGetUser(String id, String username, String firstName, String lastName, String email, String password, String phone, String userStatus) {
         System.out.println("********* GET USER *********");
         Response response = UserEndPoints.getUser(username);
@@ -59,7 +48,7 @@ public class UserTestDataDriven {
                 .body("userStatus", equalTo(Integer.parseInt(userStatus)));
     }
 
-    @Test(dataProvider = "userDataFromExcel", priority = 3,enabled = false)
+    @Test(dataProvider = "userDataFromExcel", dataProviderClass = DataProviders.class, priority = 3, enabled = false)
     public void testUpdateUser(String id, String username, String firstName, String lastName, String email, String password, String phone, String userStatus) {
         UserPayload userPayload = new UserPayload();
         userPayload.setId(Integer.parseInt(id));
@@ -74,7 +63,8 @@ public class UserTestDataDriven {
         Response response = UserEndPoints.updateUser(userPayload, username);
         response.then().log().all();
         response.then().statusCode(200);
-        // Optionally, verify the update
+        
+        // verify the updated values after update
         Response responseAfterUpdate = UserEndPoints.getUser(username);
         responseAfterUpdate.then().log().all();
         responseAfterUpdate.then().statusCode(200)
@@ -82,7 +72,7 @@ public class UserTestDataDriven {
                 .body("email", equalTo(email + "upd"));
     }
 
-    @Test(dataProvider = "userDataFromExcel", priority = 4,  enabled = false)
+    @Test(dataProvider = "userDataFromExcel", dataProviderClass = DataProviders.class, priority = 4, enabled = false)
     public void testDeleteUser(String id, String username, String firstName, String lastName, String email, String password, String phone, String userStatus) {
         System.out.println("********* DELETE USER *********");
         Response response = UserEndPoints.deleteUser(username);
