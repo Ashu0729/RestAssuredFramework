@@ -8,7 +8,6 @@
     <classes>
       <class name="api.test.UserTest">
         <methods>
-          <include name="testDeleteUser"/>
           <include name="testGetUser"/>
           <include name="setupUser"/>
           <include name="waitBetweenTests"/>

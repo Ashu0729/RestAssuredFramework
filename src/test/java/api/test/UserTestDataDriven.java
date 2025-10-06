@@ -8,6 +8,7 @@ import io.restassured.response.Response;
 import static org.hamcrest.Matchers.equalTo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import api.utilities.SchemaValidatorUtil;
 
 public class UserTestDataDriven {
     private static final Logger logger = LogManager.getLogger(UserTestDataDriven.class);
@@ -37,6 +38,8 @@ public class UserTestDataDriven {
         Response response = UserEndPoints.postUser(userPayload);
         response.then().log().all();
         response.then().statusCode(200);
+        // Schema validation (add post_user_schema.json if available)
+        // SchemaValidatorUtil.validateResponseSchema(response, "schemas/post_user_schema.json");
         Thread.sleep(10000);
     }
 
@@ -54,6 +57,8 @@ public class UserTestDataDriven {
                 .body("password", equalTo(password))
                 .body("phone", equalTo(phone))
                 .body("userStatus", equalTo(Integer.parseInt(userStatus)));
+        // Schema validation
+        SchemaValidatorUtil.validateResponseSchema(response, "schemas/get_user_schema.json");
     }
 
     @Test(dataProvider = "userDataFromExcel", dataProviderClass = DataProviders.class, priority = 3, enabled = false)

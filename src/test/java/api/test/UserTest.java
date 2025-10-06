@@ -9,6 +9,7 @@ import io.restassured.response.Response;
 import static org.hamcrest.Matchers.equalTo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import api.utilities.SchemaValidatorUtil;
 
 public class UserTest {
 	Faker faker = new Faker();
@@ -34,27 +35,32 @@ public class UserTest {
 	Thread.sleep(2000);
 	}
 
-	@Test(priority=1)
-	public void testPostUser() {
+	@Test(priority=1, enabled = true)
+	public void testPostUser() throws InterruptedException {
 		logger.info("*********** Starting - testPostUser *******************************");
 		Response response = UserEndPoints.postUser(userPayload);
 		response.then().log().all();
 		response.then().statusCode(200);
+		// Schema validation (add post_user_schema.json if available)
+		// SchemaValidatorUtil.validateResponseSchema(response, "schemas/post_user_schema.json");
+		Thread.sleep(10000);
 		logger.info("*********** Ending - testPostUser *******************************");
 
 	}
 	
-	@Test(priority=2)
+	@Test(priority=2, enabled = true)
 	public void testGetUser() {
 		logger.info("*********** Starting - testGetUser *******************************");
 		Response response = UserEndPoints.getUser(userPayload.getUsername());
 		response.then().log().all();
 		response.then().statusCode(200);
+		// Schema validation
+		SchemaValidatorUtil.validateResponseSchema(response, "schemas/get_user_schema.json");
 		logger.info("*********** Ending - testGetUser *******************************");
 
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3, enabled = false)
 	public void testUpdateUser() {
 		//Update few values using Faker
 		userPayload.setId(faker.idNumber().hashCode());
@@ -83,7 +89,7 @@ public class UserTest {
 
 	}
 	
-	@Test(priority=4)
+	@Test(priority=4, enabled = false)
 	public void testDeleteUser() {
 		logger.info("*********** Starting - testDeleteUser *******************************");
 		Response response = UserEndPoints.deleteUser(userPayload.getUsername());

@@ -14,7 +14,7 @@ public class UserEndPoints {
 			.body(payload)
 			.log().all() // Log all request details
 		.when()
-			.post(Roots.postUserURL);		
+			.post(Roots.postUserURL);
 		return response;	
 	}
 	
@@ -24,7 +24,7 @@ public class UserEndPoints {
 			.accept("application/json")
 			.log().all() // Log all request details
 		.when()
-			.get(Roots.getUserURL);			
+			.get(Roots.getUserURL);
 		return response;		
 	}
 	
@@ -37,7 +37,6 @@ public class UserEndPoints {
 			.log().all() // Log all request details
 		.when()
 			.put(Roots.updateUserURL);
-			
 		return response;		
 	}
 	
@@ -47,7 +46,7 @@ public class UserEndPoints {
 			.accept("application/json")
 			.log().all() // Log all request details
 		.when()
-			.delete(Roots.deleteUserURL);			
+			.delete(Roots.deleteUserURL);
 		return response;		
 	}
 }
